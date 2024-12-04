@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Doctor Interface - Medipredict</title>
+</head>
+<body>
+    <h2>Doctor Dashboard</h2>
+    <h3>Patient Records</h3>
+    <ul>
+        {% for patient in doctor_data.patients %}
+            <li>{{ patient.name }} - {{ patient.condition }} - Appointment: {{ patient.appointment }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Working Hours</h3>
+    <p>{{ doctor_data.working_hours }}</p>
+</body>
+</html>

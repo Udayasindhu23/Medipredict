@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %} 
+
+{% block title %}Role Selection - MediPredict{% endblock %}
+
+{% block content %}
+<div class="role-selection">
+    <h1>Select Your Role</h1>
+    <p>Please choose your role to continue:</p>
+    <div class="role-links">
+        <a href="{% url 'patient' %}" class="role-button">Patient</a>
+        <a href="{% url 'doctor' %}" class="role-button">Doctor</a>
+        <a href="{% url 'pharmacy' %}" class="role-button">Pharmacy</a>
+    </div>
+</div>
+{% endblock %}

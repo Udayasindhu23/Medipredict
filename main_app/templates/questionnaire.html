@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Health Questionnaire - Medipredict</title>
+</head>
+<body>
+    <form action="{% url 'results' %}" method="post">
+        {% csrf_token %}
+        <label>Has BP?</label> <input type="checkbox" name="bp"><br>
+        <label>Diabetic?</label> <input type="checkbox" name="diabetic"><br>
+        <label>Alcoholic?</label> <input type="checkbox" name="alcoholic"><br>
+        <!-- Add more questions as needed -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

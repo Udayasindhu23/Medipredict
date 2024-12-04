@@ -1,0 +1,19 @@
+<!-- templates/main/user_details.html -->
+{% extends 'main/base.html' %}
+
+{% block title %}User Details{% endblock %}
+
+{% block content %}
+<h1>User Details</h1>
+<p>Username: {{ user_profile.user.username }}</p>
+<p>Role: {{ user_profile.role.name }}</p>
+
+<h2>Medicines</h2>
+<ul>
+    {% for medicine in medicines %}
+        <li>{{ medicine.name }} ({{ medicine.dosage }})</li>
+    {% empty %}
+        <li>No medicines taken.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

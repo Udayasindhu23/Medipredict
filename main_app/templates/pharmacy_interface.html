@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pharmacy Interface - Medipredict</title>
+</head>
+<body>
+    <h2>Pharmacy Dashboard</h2>
+    <h3>Available Medicines</h3>
+    <ul>
+        {% for item in pharmacy_data.medicines %}
+            <li>{{ item.name }} - Price: {{ item.price }} - Available: {{ item.quantity }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Shopping Cart</h3>
+    <p>Items in your cart: {{ pharmacy_data.cart|length }}</p>
+    <!-- You can add a checkout or payment button here -->
+</body>
+</html>

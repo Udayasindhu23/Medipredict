@@ -1,0 +1,69 @@
+/* Splash Screen Styles */
+.splash-screen {
+    background: linear-gradient(135deg, #ff6b6b, #ffd93d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    width: 150px;
+}
+
+.website-name {
+    font-size: 3em;
+    color: #ffffff;
+}
+
+/* Styles for the Login Form */
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.login-form h2 {
+    color: #ff6b6b;
+}
+
+.login-form input,
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* CSS for Role Selection */
+.role-selection {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.role-selection h2 {
+    font-size: 2em;
+    color: #ff6b6b;
+}
+
+.role-selection a {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #ffd93d;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+}
+
+/* Active Link Styles */
+.active {
+    font-weight: bold;
+    color: #007bff; /* Change to the desired color */
+}

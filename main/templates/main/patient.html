@@ -1,0 +1,22 @@
+<!-- main/templates/main/patient.html -->
+{% extends 'main/base.html' %}  <!-- Ensure this line is correct -->
+
+{% block title %}Patient Dashboard - MediPredict{% endblock %}
+
+{% block content %}
+<div class="patient-info">
+    <h1>Patient Dashboard</h1>
+    <p>Welcome, patient! Here you can view your information and manage your health.</p>
+
+    <h2>Patient Information</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="number" name="age" placeholder="Age" required>
+        <input type="text" name="gender" placeholder="Gender" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <input type="text" name="blood_group" placeholder="Blood Group" required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

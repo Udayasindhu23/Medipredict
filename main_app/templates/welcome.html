@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Medipredict</title>
+    <style>
+        /* Styling for the full-screen welcome page */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #89cff0, #00509e);
+            color: #ffffff;
+        }
+        .container {
+            text-align: center;
+        }
+        .logo {
+            font-size: 4em;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .tagline {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #e3f2fd;
+        }
+        .enter-button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #00509e;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .enter-button:hover {
+            background-color: #e3f2fd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Medipredict</div>
+        <div class="tagline">Your Health, Our Priority</div><br><br>
+        <a href="{% url 'login_page' %}" class="enter-button">Enter</a>
+    </div>
+</body>
+</html>

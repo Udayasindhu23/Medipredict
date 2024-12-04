@@ -1,0 +1,27 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Health Recommendations - Medipredict</title>
+</head>
+<body>
+    <h2>Your Health Recommendations</h2>
+    <p>Based on your responses, here are the recommendations for your health.</p>
+    <p><strong>Food Suggestions:</strong> Healthy diet plan goes here...</p>
+    <p><strong>Exercise:</strong> Daily walking and routine...</p>
+    <a href="#">Book Online Consultation</a> | <a href="#">Book Offline Appointment</a>
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Health Recommendations - Medipredict</title>
+</head>
+<body>
+    <h2>Your Health Recommendations</h2>
+    <p><strong>Food Suggestions:</strong> {{ recommendations.food }}</p>
+    <p><strong>Exercise:</strong> {{ recommendations.exercise }}</p>
+    <p><strong>Consultation:</strong> {{ recommendations.consultation }}</p>
+    <a href="#">Book Online Consultation</a> | <a href="#">Book Offline Appointment</a>
+</body>
+</html>

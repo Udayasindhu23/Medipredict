@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Pharmacy Dashboard - MediPredict{% endblock %}
+
+{% block content %}
+<div class="pharmacy-dashboard">
+    <h1>Pharmacy Dashboard</h1>
+    <p>Welcome to the pharmacy! Manage your inventory and prescriptions here.</p>
+
+    <h2>Inventory Management</h2>
+    <p>Here you can add, remove, or update medication details.</p>
+
+    <h2>View Prescriptions</h2>
+    <p>Check the prescriptions available for patients.</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="medication_name" placeholder="Medication Name" required>
+        <input type="number" name="quantity" placeholder="Quantity" required>
+        <button type="submit">Update Inventory</button>
+    </form>
+</div>
+{% endblock %}

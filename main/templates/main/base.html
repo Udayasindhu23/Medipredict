@@ -1,0 +1,35 @@
+<!-- main/templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}  <!-- Load the static template tags -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}MediPredict{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'splash' %}" class="{% if request.path == '/' %}active{% endif %}">Splash</a></li>
+                <li><a href="{% url 'home' %}" class="{% if request.path == '/home/' %}active{% endif %}">Home</a></li>
+                <li><a href="{% url 'signup' %}" class="{% if request.path == '/signup/' %}active{% endif %}">Sign Up</a></li>
+                <li><a href="{% url 'forgot_password' %}" class="{% if request.path == '/forgot_password/' %}active{% endif %}">Forgot Password</a></li>
+                <li><a href="{% url 'role_selection' %}" class="{% if request.path == '/role_selection/' %}active{% endif %}">Role Selection</a></li>
+                <li><a href="{% url 'patient' %}" class="{% if request.path == '/patient/' %}active{% endif %}">Patient</a></li>
+                <li><a href="{% url 'doctor' %}" class="{% if request.path == '/doctor/' %}active{% endif %}">Doctor</a></li>
+                <li><a href="{% url 'pharmacy' %}" class="{% if request.path == '/pharmacy/' %}active{% endif %}">Pharmacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MediPredict. All rights reserved.</p>
+    </footer>
+</body>
+</html>

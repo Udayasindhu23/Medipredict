@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+
+{% load static %}  {# Load the static template tags #}
+
+{% block title %}Splash - MediPredict{% endblock %}
+
+{% block content %}
+<div class="splash-screen">
+    <div class="splash-content">
+        <img src="{% static 'css/images/logo.jpg' %}" alt="MediPredict Logo" class="logo">
+        <h1 class="website-name">MediPredict</h1>
+        <p>Welcome to MediPredict! Your health companion.</p>
+        <p><a href="{% url 'home' %}" class="start-button">Get Started</a></p>
+    </div>
+</div>
+{% endblock %}

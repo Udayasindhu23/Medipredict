@@ -1,0 +1,21 @@
+<!-- main/templates/main/home.html -->
+{% extends 'main/base.html' %}  <!-- Corrected this line -->
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Home Page</h1>
+<p>This is the main content of the home page.</p>
+
+<div class="login-form">
+    <h2>Welcome Back to MediPredict</h2>
+    <form action="{% url 'home' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    <a href="{% url 'forgot_password' %}">Forgot Password?</a>
+    <a href="{% url 'signup' %}">Create Account</a>
+</div>
+{% endblock %}
